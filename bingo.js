@@ -1,3 +1,5 @@
+var MyVar = 0
+
 function AniDice()
 {
     MyVar=setInterval(rolldice,20)
