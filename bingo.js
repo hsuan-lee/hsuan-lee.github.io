@@ -1,4 +1,3 @@
-<script>
 function AniDice()
 {
     MyVar=setInterval(rolldice,20)
@@ -14,4 +13,3 @@ function stopDice()
 {
     clearInterval(MyVar);
 }
-</script>
