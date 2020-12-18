@@ -1,5 +1,6 @@
 var MyVar = 0
 var WinNumbers = [51, 98, 26, 13, 59, 106, 44, 3, 77, 94, 1, 11, 88, 71, 100, 2]
+var Result = []
 
 function AniDice()
 {
@@ -17,10 +18,19 @@ function stopDice()
     clearInterval(MyVar);
     
     var win = WinNumbers[Math.floor(Math.random() * WinNumbers.length)];
+    Result.push(win);
     document.getElementById("dice").innerHTML = win;
 
     var index = WinNumbers.indexOf(win);
     if (index > -1) {
         WinNumbers.splice(index, 1);
     }
+
+    var txt = "";
+    
+    for (var i = 0; i < Result.length; i++) {
+        txt += " " + Result[i];
+    } 
+    document.getElementById("result").innerHTML = txt;
+
 }
