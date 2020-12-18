@@ -17,7 +17,12 @@ function stopDice()
 {
     clearInterval(MyVar);
     
-    var win = WinNumbers[Math.floor(Math.random() * WinNumbers.length)];
+    if (WinNumbers.length == 0) {
+        var win = 0;
+    } else {
+        var win = WinNumbers[Math.floor(Math.random() * WinNumbers.length)];
+    }
+
     Result.push(win);
     document.getElementById("dice").innerHTML = win;
 
